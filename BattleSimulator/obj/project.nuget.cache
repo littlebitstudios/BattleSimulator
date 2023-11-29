@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "8W9Ccz6JXYbfbo5j5CfaVfthR/MUgIu9GusBp7DuVgQrLOyBE1RyESGm86amu/bSX6aCekS5grpdk/7HxaUo3w==",
+  "success": true,
+  "projectFilePath": "/home/jaherron/code/gitrepos/BattleSimulator/BattleSimulator/BattleSimulator.csproj",
+  "expectedPackageFiles": [
+    "/home/jaherron/.nuget/packages/yamldotnet/13.7.1/yamldotnet.13.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}
