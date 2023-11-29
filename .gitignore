@@ -398,8 +398,6 @@ FodyWeavers.xsd
 *.sln.iml
 
 
-BattleSimulator/bin/Debug/net7.0/BattleSimulator.dll
-BattleSimulator/bin/Debug/net7.0/BattleSimulator.pdb
-BattleSimulator/obj/Debug/net7.0/BattleSimulator.dll
-BattleSimulator/obj/Debug/net7.0/BattleSimulator.pdb
-battlesimdata/
+BattleSimulator/bin/*
+BattleSimulator/obj/*
+battlesimdata/*
