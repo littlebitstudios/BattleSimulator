@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/jaherron/code/gitrepos/BattleSimulator/BattleSimulator/BattleSimulator.csproj": {}
+    "/workspaces/BattleSimulator/BattleSimulator/BattleSimulator.csproj": {}
   },
   "projects": {
-    "/home/jaherron/code/gitrepos/BattleSimulator/BattleSimulator/BattleSimulator.csproj": {
+    "/workspaces/BattleSimulator/BattleSimulator/BattleSimulator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/jaherron/code/gitrepos/BattleSimulator/BattleSimulator/BattleSimulator.csproj",
+        "projectUniqueName": "/workspaces/BattleSimulator/BattleSimulator/BattleSimulator.csproj",
         "projectName": "BattleSimulator",
-        "projectPath": "/home/jaherron/code/gitrepos/BattleSimulator/BattleSimulator/BattleSimulator.csproj",
-        "packagesPath": "/home/jaherron/.nuget/packages/",
-        "outputPath": "/home/jaherron/code/gitrepos/BattleSimulator/BattleSimulator/obj/",
+        "projectPath": "/workspaces/BattleSimulator/BattleSimulator/BattleSimulator.csproj",
+        "packagesPath": "/home/codespace/.nuget/packages/",
+        "outputPath": "/workspaces/BattleSimulator/BattleSimulator/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/jaherron/.nuget/NuGet/NuGet.Config"
+          "/home/codespace/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/dotnet/7.0.306/sdk/7.0.306/RuntimeIdentifierGraph.json"
         }
       }
     }
