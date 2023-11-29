@@ -172,7 +172,7 @@ The battle will play out, with characters being eliminated one by one until only
 
 # Credits
 ## This README
-**Honkai: Star Rail** is a game created by miHoYo/HoYoverse/Cognosphere. All characters from that game mentioned in this README are properties of miHoYo/HoYoverse/Cognosphere.
+**Honkai: Star Rail** is a game created by miHoYo/HoYoverse/Cognosphere. That game and all characters from that game mentioned in this README are properties of miHoYo/HoYoverse/Cognosphere.
 
 ## Entire Project
 This project uses a NuGet library called **YamlDotNet** for reading and writing YAML files, licensed under the **MIT License**. You can find this package on https://nuget.com/packages/YamlDotNet or in the repo [aaubry/YamlDotNet](https://github.com/aaubry/YamlDotNet).
