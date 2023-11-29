@@ -63,110 +63,114 @@ Enter the path to the character list YAML file: /home/jaherron/Documents/BattleS
 ```
 Now, the battle takes place. Here's an example, again using characters from Star Rail.
 ```plaintext
-Asta damaged Natasha by 375 HP.
-Asta has 939 HP left. Natasha has 569 HP left.
+The fight starts with 8 players!
 
-LittleBit damaged Welt by 415 HP.
-LittleBit has 1254 HP left. Welt has 517 HP left.
+March 7th damaged LittleBit by 149 HP.
+March 7th has 955 HP left. LittleBit has 1105 HP left.
 
-Welt damaged Natasha by 259 HP.
-Welt has 517 HP left. Natasha has 310 HP left.
+Welt damaged Dan Heng by 115 HP.
+Welt has 932 HP left. Dan Heng has 824 HP left.
 
-Natasha damaged Serval by 262 HP.
-Natasha has 310 HP left. Serval has 666 HP left.
+Natasha damaged Dan Heng by 118 HP.
+Natasha has 944 HP left. Dan Heng has 706 HP left.
 
-Dan Heng damaged March 7th by 171 HP.
-Dan Heng has 939 HP left. March 7th has 784 HP left.
+Qingque damaged Natasha by 407 HP.
+Qingque has 939 HP left. Natasha has 537 HP left.
 
-Asta damaged March 7th by 354 HP.
-Asta has 939 HP left. March 7th has 430 HP left.
+Asta damaged Qingque by 355 HP.
+Asta has 939 HP left. Qingque has 584 HP left.
 
-Qingque damaged Dan Heng by 327 HP.
-Qingque has 939 HP left. Dan Heng has 612 HP left.
+Natasha damaged Serval by 333 HP.
+Natasha has 537 HP left. Serval has 595 HP left.
 
-March 7th damaged LittleBit by 45 HP.
-March 7th has 430 HP left. LittleBit has 1209 HP left.
+Welt damaged LittleBit by 383 HP.
+Welt has 932 HP left. LittleBit has 722 HP left.
 
-Dan Heng damaged March 7th by 330 HP.
-Dan Heng has 612 HP left. March 7th has 100 HP left.
+Natasha damaged March 7th by 112 HP.
+Natasha has 537 HP left. March 7th has 843 HP left.
 
-Asta damaged Welt by 57 HP.
-Asta has 939 HP left. Welt has 460 HP left.
+LittleBit damaged Welt by 238 HP.
+LittleBit has 722 HP left. Welt has 694 HP left.
 
-March 7th damaged LittleBit by 80 HP.
-March 7th has 100 HP left. LittleBit has 1129 HP left.
+Dan Heng damaged Welt by 60 HP.
+Dan Heng has 706 HP left. Welt has 634 HP left.
 
-Qingque damaged Dan Heng by 95 HP.
-Qingque has 939 HP left. Dan Heng has 517 HP left.
+Serval damaged Welt by 106 HP.
+Serval has 595 HP left. Welt has 528 HP left.
 
-LittleBit eliminated Dan Heng!
-LittleBit has 1129 HP left.
+Asta damaged Welt by 85 HP.
+Asta has 939 HP left. Welt has 443 HP left.
 
-LittleBit damaged Welt by 142 HP.
-LittleBit has 1129 HP left. Welt has 318 HP left.
+Qingque eliminated Natasha!
+Qingque has 584 HP left.
+Remaining players: LittleBit, March 7th, Serval, Welt, Dan Heng, Qingque, Asta
 
-Natasha healed themself by 41 HP. They now have 351 HP.
+Qingque damaged Asta by 232 HP.
+Qingque has 584 HP left. Asta has 707 HP left.
+
+Serval damaged March 7th by 121 HP.
+Serval has 595 HP left. March 7th has 722 HP left.
+
+March 7th damaged Welt by 43 HP.
+March 7th has 722 HP left. Welt has 400 HP left.
+
+March 7th damaged Dan Heng by 181 HP.
+March 7th has 722 HP left. Dan Heng has 525 HP left.
+
+Qingque damaged Asta by 325 HP.
+Qingque has 584 HP left. Asta has 382 HP left.
+
+LittleBit damaged Asta by 190 HP.
+LittleBit has 722 HP left. Asta has 192 HP left.
+
+Asta damaged Qingque by 184 HP.
+Asta has 192 HP left. Qingque has 400 HP left.
+
+LittleBit eliminated Welt!
+LittleBit has 722 HP left.
+Remaining players: LittleBit, March 7th, Serval, Dan Heng, Qingque, Asta
+
+Dan Heng damaged Serval by 243 HP.
+Dan Heng has 525 HP left. Serval has 352 HP left.
+
+Asta damaged Qingque by 337 HP.
+Asta has 192 HP left. Qingque has 63 HP left.
+
+Asta damaged March 7th by 371 HP.
+Asta has 192 HP left. March 7th has 351 HP left.
+
+Dan Heng eliminated Asta!
+Dan Heng has 525 HP left.
+Remaining players: LittleBit, March 7th, Serval, Dan Heng, Qingque
+
+March 7th damaged Serval by 99 HP.
+March 7th has 351 HP left. Serval has 253 HP left.
 
 LittleBit eliminated March 7th!
-LittleBit has 1129 HP left.
+LittleBit has 722 HP left.
+Remaining players: LittleBit, Serval, Dan Heng, Qingque
 
-Welt damaged Natasha by 165 HP.
-Welt has 318 HP left. Natasha has 186 HP left.
+Qingque eliminated Serval!
+Qingque has 63 HP left.
+Remaining players: LittleBit, Dan Heng, Qingque
 
-Asta damaged Natasha by 117 HP.
-Asta has 939 HP left. Natasha has 69 HP left.
+Dan Heng eliminated Qingque!
+Dan Heng has 525 HP left.
+Remaining players: LittleBit, Dan Heng
 
-Natasha damaged Welt by 43 HP.
-Natasha has 69 HP left. Welt has 275 HP left.
+Dan Heng damaged LittleBit by 238 HP.
+Dan Heng has 525 HP left. LittleBit has 484 HP left.
 
-Welt damaged Qingque by 278 HP.
-Welt has 275 HP left. Qingque has 661 HP left.
+LittleBit damaged Dan Heng by 405 HP.
+LittleBit has 484 HP left. Dan Heng has 120 HP left.
 
-Natasha damaged Asta by 82 HP.
-Natasha has 69 HP left. Asta has 857 HP left.
+Dan Heng damaged LittleBit by 142 HP.
+Dan Heng has 120 HP left. LittleBit has 342 HP left.
 
-Natasha eliminated Welt!
-Natasha has 69 HP left.
-
-Asta damaged Qingque by 50 HP.
-Asta has 857 HP left. Qingque has 611 HP left.
-
-Serval damaged Qingque by 235 HP.
-Serval has 666 HP left. Qingque has 376 HP left.  // LittleBit: why is the devil's number here
-
-Serval eliminated Natasha!
-Serval has 666 HP left.
-
-LittleBit damaged Asta by 135 HP.
-LittleBit has 1129 HP left. Asta has 722 HP left.
-
-LittleBit damaged Serval by 618 HP.
-LittleBit has 1129 HP left. Serval has 48 HP left.
-
-Serval damaged LittleBit by 505 HP.
-Serval has 48 HP left. LittleBit has 624 HP left.
-
-Asta eliminated Qingque!
-Asta has 722 HP left.
-
-Asta eliminated Serval!
-Asta has 722 HP left.
-
-LittleBit damaged Asta by 166 HP.
-LittleBit has 624 HP left. Asta has 556 HP left.
-
-Asta damaged LittleBit by 218 HP.
-Asta has 556 HP left. LittleBit has 406 HP left.
-
-LittleBit damaged Asta by 311 HP.
-LittleBit has 406 HP left. Asta has 245 HP left.
-
-Asta damaged LittleBit by 197 HP.
-Asta has 245 HP left. LittleBit has 209 HP left.
-
-Asta eliminated LittleBit!
-Asta has 245 HP left.
-Asta won!
+LittleBit eliminated Dan Heng!
+LittleBit has 342 HP left.
+Remaining players: LittleBit
+LittleBit won!
 ```
 The battle will play out, with characters being eliminated one by one until only one stands. The last one standing is the winner!
 
