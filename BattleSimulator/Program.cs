@@ -14,6 +14,8 @@ if (cmd.Equals("e", StringComparison.OrdinalIgnoreCase))
         var path = Console.ReadLine();
         var characterdb = File.ReadAllText(path);
         alivecharacters = deserializer.Deserialize<List<Character>>(characterdb);
+        Console.WriteLine();
+        Console.WriteLine($"The fight starts with {alivecharacters.Count()} players!");
     }
     catch (DirectoryNotFoundException)
     {
@@ -40,7 +42,7 @@ if (cmd.Equals("e", StringComparison.OrdinalIgnoreCase))
                 {
                     attackingchar.health = attackingchar.maxHealth;
                 }
-                System.Console.WriteLine($"{attackingchar.name} healed themself by {healamount} HP. They now have {attackingchar.health} HP.");
+                Console.WriteLine($"{attackingchar.name} healed themself by {healamount} HP. They now have {attackingchar.health} HP.");
             }
             else
             {
@@ -53,6 +55,7 @@ if (cmd.Equals("e", StringComparison.OrdinalIgnoreCase))
                     System.Console.WriteLine($"{attackingchar.name} has {attackingchar.health} HP left.");
                     deadcharacters.Add(targetchar);
                     alivecharacters.Remove(targetchar);
+                    System.Console.WriteLine($"Remaining players: {string.Join(", ", alivecharacters.Select(c => c.name))}");
                 }
                 else
                 {
@@ -79,6 +82,7 @@ if (cmd.Equals("e", StringComparison.OrdinalIgnoreCase))
                     System.Console.WriteLine($"{attackingchar.name} has {attackingchar.health} HP left.");
                     deadcharacters.Add(targetchar);
                     alivecharacters.Remove(targetchar);
+                    System.Console.WriteLine($"Remaining players: {string.Join(", ", alivecharacters.Select(c => c.name))}");
                 }
                 else
                 {
