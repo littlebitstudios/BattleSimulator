@@ -397,7 +397,4 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-
-BattleSimulator/bin/*
-BattleSimulator/obj/*
 battlesimdata/*
