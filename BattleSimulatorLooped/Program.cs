@@ -8,6 +8,7 @@
         var path = "";
 
         Console.WriteLine("LittleBit's Battle Simulator (Looped Edition)");
+        Console.WriteLine("If you don't have a character list YAML file, end this program (Ctrl+C) and make a new YAML using the non-looped version.");
         try
         {
             Console.WriteLine();
