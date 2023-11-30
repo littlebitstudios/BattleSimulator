@@ -67,3 +67,6 @@
 /workspaces/BattleSimulator/BattleSimulator/obj/Debug/net7.0/BattleSimulator.pdb
 /workspaces/BattleSimulator/BattleSimulator/obj/Debug/net7.0/BattleSimulator.genruntimeconfig.cache
 /workspaces/BattleSimulator/BattleSimulator/obj/Debug/net7.0/ref/BattleSimulator.dll
+C:\Users\jaher\Source\Repos\jaherron\BattleSimulator\BattleSimulator\obj\Debug\net7.0\BattleSimulator.dll
+C:\Users\jaher\Source\Repos\jaherron\BattleSimulator\BattleSimulator\obj\Debug\net7.0\refint\BattleSimulator.dll
+C:\Users\jaher\Source\Repos\jaherron\BattleSimulator\BattleSimulator\obj\Debug\net7.0\BattleSimulator.pdb
