@@ -35,6 +35,8 @@ if (cmd.Equals("e", StringComparison.OrdinalIgnoreCase))
         {
             if (attackingchar.Equals(targetchar))
             {
+                // healers that try to attack themselves will heal instead.
+
                 Console.WriteLine();
                 var healamount = rand.Next(attackingchar.minHealing, attackingchar.maxHealing);
                 attackingchar.health += healamount;
@@ -69,7 +71,7 @@ if (cmd.Equals("e", StringComparison.OrdinalIgnoreCase))
         {
             if (attackingchar.Equals(targetchar))
             {
-
+                // do nothing, we don't want suicidal fighters.
             }
             else
             {

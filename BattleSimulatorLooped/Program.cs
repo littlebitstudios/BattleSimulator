@@ -46,6 +46,8 @@
                 {
                     if (attackingchar.Equals(targetchar))
                     {
+                        // healers that try to attack themselves will heal instead.
+                        
                         Console.WriteLine();
                         var healamount = rand.Next(attackingchar.minHealing, attackingchar.maxHealing);
                         attackingchar.health += healamount;
