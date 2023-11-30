@@ -36,6 +36,8 @@
             Console.WriteLine();
             Console.WriteLine($"The fight starts with {alivecharacters.Count()} players!");
             Console.WriteLine("If you want to stop the program, use Ctrl+C!");
+
+            // fighting logic begins here
             while (alivecharacters.Count > 1)
             {
                 Thread.Sleep(700);
@@ -47,7 +49,6 @@
                     if (attackingchar.Equals(targetchar))
                     {
                         // healers that try to attack themselves will heal instead.
-                        
                         Console.WriteLine();
                         var healamount = rand.Next(attackingchar.minHealing, attackingchar.maxHealing);
                         attackingchar.health += healamount;
@@ -55,7 +56,9 @@
                         {
                             attackingchar.health = attackingchar.maxHealth;
                         }
+                        Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine($"{attackingchar.name} healed themself by {healamount} HP. They now have {attackingchar.health} HP.");
+                        Console.ResetColor();
                     }
                     else
                     {
@@ -64,7 +67,9 @@
                         if (targetchar.health <= 0)
                         {
                             Console.WriteLine();
+                            Console.ForegroundColor = ConsoleColor.Red;
                             System.Console.WriteLine($"{attackingchar.name} eliminated {targetchar.name}!");
+                            Console.ResetColor();
                             System.Console.WriteLine($"{attackingchar.name} has {attackingchar.health} HP left.");
                             deadcharacters.Add(targetchar);
                             alivecharacters.Remove(targetchar);
@@ -91,7 +96,9 @@
                         if (targetchar.health <= 0)
                         {
                             Console.WriteLine();
+                            Console.ForegroundColor = ConsoleColor.Red;
                             System.Console.WriteLine($"{attackingchar.name} eliminated {targetchar.name}!");
+                            Console.ResetColor();
                             System.Console.WriteLine($"{attackingchar.name} has {attackingchar.health} HP left.");
                             deadcharacters.Add(targetchar);
                             alivecharacters.Remove(targetchar);
@@ -106,6 +113,9 @@
                     }
                 }
             }
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            System.Console.WriteLine($"{alivecharacters[0].name} won!");
+            Console.ResetColor();
         }
     }
 }
