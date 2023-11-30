@@ -76,6 +76,33 @@
                         }
                     }
                 }
+                else
+                {
+                    if (attackingchar.Equals(targetchar))
+                    {
+                        // do nothing, we don't want suicidal fighters.
+                    }
+                    else
+                    {
+                        var damage = rand.Next(attackingchar.minDamage, attackingchar.maxDamage);
+                        targetchar.health -= damage;
+                        if (targetchar.health <= 0)
+                        {
+                            Console.WriteLine();
+                            System.Console.WriteLine($"{attackingchar.name} eliminated {targetchar.name}!");
+                            System.Console.WriteLine($"{attackingchar.name} has {attackingchar.health} HP left.");
+                            deadcharacters.Add(targetchar);
+                            alivecharacters.Remove(targetchar);
+                            System.Console.WriteLine($"Remaining players: {string.Join(", ", alivecharacters.Select(c => c.name))}");
+                        }
+                        else
+                        {
+                            Console.WriteLine();
+                            System.Console.WriteLine($"{attackingchar.name} damaged {targetchar.name} by {damage} HP.");
+                            System.Console.WriteLine($"{attackingchar.name} has {attackingchar.health} HP left. {targetchar.name} has {targetchar.health} HP left.");
+                        }
+                    }
+                }
             }
         }
     }
