@@ -28,7 +28,7 @@ if (cmd.Equals("e", StringComparison.OrdinalIgnoreCase))
     while (alivecharacters.Count > 1)
     {
         Thread.Sleep(700);
-        Random rand = new Random();
+        Random rand = new Random((int)DateTime.Now.Ticks);
         var attackingchar = alivecharacters[rand.Next(alivecharacters.Count())];
         var targetchar = alivecharacters[rand.Next(alivecharacters.Count())];
         if (attackingchar.healer)
