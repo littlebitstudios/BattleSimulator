@@ -101,7 +101,16 @@ else if (cmd.Equals("n", StringComparison.OrdinalIgnoreCase))
     Console.WriteLine();
     Console.Write("Enter the file path where for the new character list YAML file: ");
     var path = Console.ReadLine();
-    string[] splitpath = path.Split("/");
+    string separator = "";
+    if(path.Contains('/'))
+    {
+        separator = "/";
+    }
+    else if (path.Contains('\\'))
+    {
+        separator = "\\";
+    }
+    string[] splitpath = path.Split(separator);
     var dir = path.Replace(splitpath.Last(), "");
     if (Directory.Exists(dir) == false)
     {
