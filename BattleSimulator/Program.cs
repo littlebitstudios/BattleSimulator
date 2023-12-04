@@ -56,18 +56,18 @@ if (cmd.Equals("e", StringComparison.OrdinalIgnoreCase))
                 {
                     Console.WriteLine();
                     Console.ForegroundColor = ConsoleColor.Red;
-                    System.Console.WriteLine($"{attackingchar.name} eliminated {targetchar.name}!");
+                    Console.WriteLine($"{attackingchar.name} eliminated {targetchar.name}!");
                     Console.ResetColor();
-                    System.Console.WriteLine($"{attackingchar.name} has {attackingchar.health} HP left.");
+                    Console.WriteLine($"{attackingchar.name} has {attackingchar.health} HP left.");
                     deadcharacters.Add(targetchar);
                     alivecharacters.Remove(targetchar);
-                    System.Console.WriteLine($"Remaining players: {string.Join(", ", alivecharacters.Select(c => c.name))}");
+                    Console.WriteLine($"Remaining players: {string.Join(", ", alivecharacters.Select(c => c.name))}");
                 }
                 else
                 {
                     Console.WriteLine();
-                    System.Console.WriteLine($"{attackingchar.name} damaged {targetchar.name} by {damage} HP.");
-                    System.Console.WriteLine($"{attackingchar.name} has {attackingchar.health} HP left. {targetchar.name} has {targetchar.health} HP left.");
+                    Console.WriteLine($"{attackingchar.name} damaged {targetchar.name} by {damage} HP.");
+                    Console.WriteLine($"{attackingchar.name} has {attackingchar.health} HP left. {targetchar.name} has {targetchar.health} HP left.");
                 }
             }
         }
@@ -85,24 +85,24 @@ if (cmd.Equals("e", StringComparison.OrdinalIgnoreCase))
                 {
                     Console.WriteLine();
                     Console.ForegroundColor = ConsoleColor.Red;
-                    System.Console.WriteLine($"{attackingchar.name} eliminated {targetchar.name}!");
+                    Console.WriteLine($"{attackingchar.name} eliminated {targetchar.name}!");
                     Console.ResetColor();
-                    System.Console.WriteLine($"{attackingchar.name} has {attackingchar.health} HP left.");
+                    Console.WriteLine($"{attackingchar.name} has {attackingchar.health} HP left.");
                     deadcharacters.Add(targetchar);
                     alivecharacters.Remove(targetchar);
-                    System.Console.WriteLine($"Remaining players: {string.Join(", ", alivecharacters.Select(c => c.name))}");
+                    Console.WriteLine($"Remaining players: {string.Join(", ", alivecharacters.Select(c => c.name))}");
                 }
                 else
                 {
                     Console.WriteLine();
-                    System.Console.WriteLine($"{attackingchar.name} damaged {targetchar.name} by {damage} HP.");
-                    System.Console.WriteLine($"{attackingchar.name} has {attackingchar.health} HP left. {targetchar.name} has {targetchar.health} HP left.");
+                    Console.WriteLine($"{attackingchar.name} damaged {targetchar.name} by {damage} HP.");
+                    Console.WriteLine($"{attackingchar.name} has {attackingchar.health} HP left. {targetchar.name} has {targetchar.health} HP left.");
                 }
             }
         }
     }
     Console.ForegroundColor = ConsoleColor.Cyan;
-    System.Console.WriteLine($"{alivecharacters[0].name} won!");
+    Console.WriteLine($"{alivecharacters[0].name} won!");
     Console.ResetColor();
 }
 else if (cmd.Equals("n", StringComparison.OrdinalIgnoreCase))
