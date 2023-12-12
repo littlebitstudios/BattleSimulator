@@ -19,7 +19,6 @@ Here's an example, being my Trailblazer from [Honkai: Star Rail](https://hsr.hoy
 The variables allow for much flexibility in character definition, such as giving a character more maximum health than current health, allowing healers to overheal a bit.
 
 # Running the Program
-**Currently, this program is only verified to run on MacOS and Linux due to how it parses file paths (using forwardslashes instead of backslashes).**
 
 When the program is run, it asks if you have an existing character list YAML file or if it should generate a template for you.
 ```plaintext
