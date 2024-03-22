@@ -178,6 +178,9 @@ The `BattleSimulatorLooped` folder contains a version of the software that runs 
 
 The looped version is designed to reload the character list YAML file you give it every time it loops, meaning that you can edit the file and the new roster takes effect on the next loop. The looped version **does not** have the ability to generate the example characters file, so either use the normal version first or copy the example from the ["Running the Program"](#running-the-program) section of the `README` here.
 
+# GUI Characters Manager
+The `BattleSimCharacterManager` folder is a GUI character manager that I have yet to finish.
+
 # Credits
 ## This README
 **Honkai: Star Rail** is a game created by miHoYo/HoYoverse/Cognosphere. That game and all characters from that game mentioned in this README are properties of miHoYo/HoYoverse/Cognosphere.
