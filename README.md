@@ -1,5 +1,5 @@
 # LittleBit's Battle Simulator
-A statistics-based random battle simulator. ![Static Badge](https://img.shields.io/badge/coded_in-C#-blue?style=flat) ![Static Badge](https://img.shields.io/badge/license-MIT-blue?style=flat) ![Static Badge](https://img.shields.io/badge/uses-YAML-blue?style=flat)
+A statistics-based random battle simulator. ![Static Badge](https://img.shields.io/badge/coded_in-C%23-blue?style=flat) ![Static Badge](https://img.shields.io/badge/license-MIT-blue?style=flat) ![Static Badge](https://img.shields.io/badge/uses-YAML-blue?style=flat)
 
 
 # Definition of Characters
