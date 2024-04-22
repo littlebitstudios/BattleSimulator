@@ -1,6 +1,7 @@
 # LittleBit's Battle Simulator
 A statistics-based random battle simulator.
-[![forthebadge](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/license-mit.svg)](https://forthebadge.com) ![Static Badge](https://img.shields.io/badge/USES-YAML?style=flat)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/license-mit.svg)](https://forthebadge.com) ![Static Badge](https://img.shields.io/badge/USES-YAML-blue?style=flat)
+
 
 # Definition of Characters
 The roster of a battle is defined by a YAML file containing a list of characters.
