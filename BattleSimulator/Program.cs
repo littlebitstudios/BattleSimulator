@@ -2,7 +2,7 @@
 Console.WriteLine("LittleBit's Battle Simulator");
 Console.Write("Do you have an (e)xisting character list, or do you need a (n)ew one?");
 var cmd = Console.ReadLine();
-if (cmd.Equals("e", StringComparison.OrdinalIgnoreCase))
+if (cmd != null && cmd.Equals("e", StringComparison.OrdinalIgnoreCase))
 {
     var deserializer = new YamlDotNet.Serialization.Deserializer();
     var alivecharacters = new List<Character>();
@@ -13,9 +13,20 @@ if (cmd.Equals("e", StringComparison.OrdinalIgnoreCase))
         Console.Write("Enter the path to the character list YAML file: ");
         var path = Console.ReadLine();
         var characterdb = File.ReadAllText(path);
-        alivecharacters = deserializer.Deserialize<List<Character>>(characterdb);
-        Console.WriteLine();
-        Console.WriteLine($"The fight starts with {alivecharacters.Count()} players!");
+        try
+        {
+            alivecharacters = deserializer.Deserialize<List<Character>>(characterdb);
+            Console.WriteLine();
+            Console.WriteLine($"The fight starts with {alivecharacters.Count()} players!");
+        }
+        catch (YamlDotNet.Core.YamlException ex)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Failed to parse the character list YAML file. Please check the file format.");
+            Console.WriteLine($"Error details: {ex.Message}");
+            Console.ResetColor();
+            return;
+        }
     }
     catch (DirectoryNotFoundException)
     {
@@ -26,10 +37,10 @@ if (cmd.Equals("e", StringComparison.OrdinalIgnoreCase))
         Console.WriteLine("That's an invalid path (nonexistent file), try again.");
     }
     // fighting logic begins here
+    Random rand = new Random();
     while (alivecharacters.Count > 1)
     {
         Thread.Sleep(700);
-        Random rand = new Random((int)DateTime.Now.Ticks);
         var attackingchar = alivecharacters[rand.Next(alivecharacters.Count())];
         var targetchar = alivecharacters[rand.Next(alivecharacters.Count())];
         if (attackingchar.healer)
@@ -38,7 +49,7 @@ if (cmd.Equals("e", StringComparison.OrdinalIgnoreCase))
             {
                 // healers that try to attack themselves will heal instead.
                 Console.WriteLine();
-                var healamount = rand.Next(attackingchar.minHealing, attackingchar.maxHealing);
+                var healamount = rand.Next(attackingchar.minHealing, attackingchar.maxHealing + 1);
                 attackingchar.health += healamount;
                 if (attackingchar.health > attackingchar.maxHealth)
                 {
@@ -50,7 +61,7 @@ if (cmd.Equals("e", StringComparison.OrdinalIgnoreCase))
             }
             else
             {
-                var damage = rand.Next(attackingchar.minDamage, attackingchar.maxDamage);
+                var damage = rand.Next(attackingchar.minDamage, attackingchar.maxDamage + 1);
                 targetchar.health -= damage;
                 if (targetchar.health <= 0)
                 {
@@ -105,14 +116,14 @@ if (cmd.Equals("e", StringComparison.OrdinalIgnoreCase))
     Console.WriteLine($"{alivecharacters[0].name} won!");
     Console.ResetColor();
 }
-else if (cmd.Equals("n", StringComparison.OrdinalIgnoreCase))
+else if (cmd != null && cmd.Equals("n", StringComparison.OrdinalIgnoreCase))
 {
     var serializer = new YamlDotNet.Serialization.Serializer();
     Console.WriteLine();
     Console.Write("Enter the file path where for the new character list YAML file: ");
     var path = Console.ReadLine();
     string separator = "";
-    if(path.Contains('/'))
+    if (path.Contains('/'))
     {
         separator = "/";
     }
@@ -121,15 +132,16 @@ else if (cmd.Equals("n", StringComparison.OrdinalIgnoreCase))
         separator = "\\";
     }
     string[] splitpath = path.Split(separator);
-    var dir = path.Replace(splitpath.Last(), "");
-    if (Directory.Exists(dir) == false)
+    var dir = Path.GetDirectoryName(path);
+    if (!string.IsNullOrEmpty(dir) && Directory.Exists(dir) == false)
     {
         Directory.CreateDirectory(dir);
     }
+    // Example characters with all zero stats as placeholders.
     var characters = new List<Character>()
     {
-        new("Example1", 0, 0, 0, false, 0, 0),
-        new("Example2", 0, 0, 0, false, 0, 0)
+        new("Example1", 0, 0, 0, false, 0, 0), // Placeholder character
+        new("Example2", 0, 0, 0, false, 0, 0)  // Placeholder character
     };
     var newchardb = serializer.Serialize(characters);
     File.WriteAllText(path, newchardb);
