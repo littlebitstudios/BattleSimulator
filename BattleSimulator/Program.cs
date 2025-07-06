@@ -38,26 +38,78 @@ if (cmd != null && cmd.Equals("e", StringComparison.OrdinalIgnoreCase))
     }
     // fighting logic begins here
     Random rand = new Random();
+    int cycleCount = 0;
     while (alivecharacters.Count > 1)
     {
         Thread.Sleep(700);
+        cycleCount++;
+
+        if (cycleCount > 100)
+        {
+            if (cycleCount > 150)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.WriteLine($"\nCycle {cycleCount} | STORM ACTIVE: -5 health/cycle, healing disabled");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.WriteLine($"\nCycle {cycleCount} | STORM ACTIVE: -5 health/cycle | Storm intensifies in {150 - cycleCount} cycles");
+                Console.ResetColor();
+            }
+            foreach (var c in alivecharacters.ToList())
+            {
+                c.health -= 5;
+                if (c.health <= 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"{c.name} was lost in the storm!");
+                    Console.ResetColor();
+                    deadcharacters.Add(c);
+                    alivecharacters.Remove(c);
+                }
+            }
+            if (alivecharacters.Count <= 1)
+                break;
+        }
+        else if (cycleCount > 50)
+        {
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine($"\nCycle {cycleCount} | Storm activates in {100 - cycleCount} cycles");
+            Console.ResetColor();
+        }
+        else
+        {
+            Console.WriteLine($"\nCycle {cycleCount}");
+        }
+
         var attackingchar = alivecharacters[rand.Next(alivecharacters.Count())];
         var targetchar = alivecharacters[rand.Next(alivecharacters.Count())];
         if (attackingchar.healer)
         {
             if (attackingchar.Equals(targetchar))
             {
-                // healers that try to attack themselves will heal instead.
-                Console.WriteLine();
-                var healamount = rand.Next(attackingchar.minHealing, attackingchar.maxHealing + 1);
-                attackingchar.health += healamount;
-                if (attackingchar.health > attackingchar.maxHealth)
+                if (cycleCount > 150)
                 {
-                    attackingchar.health = attackingchar.maxHealth;
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    Console.WriteLine($"{attackingchar.name} can't heal because of the storm!");
+                    Console.ResetColor();
                 }
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"{attackingchar.name} healed themself by {healamount} HP. They now have {attackingchar.health} HP.");
-                Console.ResetColor();
+                else
+                {
+                    // healers that try to attack themselves will heal instead.
+                    Console.WriteLine();
+                    var healamount = rand.Next(attackingchar.minHealing, attackingchar.maxHealing + 1);
+                    attackingchar.health += healamount;
+                    if (attackingchar.health > attackingchar.maxHealth)
+                    {
+                        attackingchar.health = attackingchar.maxHealth;
+                    }
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"{attackingchar.name} healed themself by {healamount} HP. They now have {attackingchar.health} HP.");
+                    Console.ResetColor();
+                }
             }
             else
             {
